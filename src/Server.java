@@ -7,10 +7,6 @@ import java.net.Socket;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
-//import javax.imageio.ImageIO;
-//import javax.swing.ImageIcon;
-//import javax.swing.JLabel;
-
 public class Server {
     public static final int PORT = 3030;
     private ServerSocket server;

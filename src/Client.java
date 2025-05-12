@@ -1,12 +1,11 @@
 import java.io.*;
 import java.net.Socket;
 import java.nio.file.Files;
-//import java.net.UnknownHostException;
 import java.util.Scanner;
 //import java.awt.Image;
 
 public class Client {
-    public static final String FILES_PATH = "files";
+    public static final String FILES_PATH = "./src/files";
     private Socket clientSock;
     private DataInputStream receiveData;
     private DataOutputStream sendData;
@@ -153,7 +152,7 @@ public class Client {
         StringBuilder menu = new StringBuilder("--Files--\n");
         File[] fileList = new File(FILES_PATH).listFiles();
 
-        for(int i = 0; i< fileList.length;i++)
+        for(int i = 0; i < fileList.length;i++)
             menu.append(String.format("* %d: %s\n", i + 1, fileList[i].getName()));
         System.out.print(menu);
     }
