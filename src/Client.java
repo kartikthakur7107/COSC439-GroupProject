@@ -18,6 +18,7 @@ public class Client {
         System.out.print("Enter your Username: ");
         username = write.nextLine();
 
+        //You can replace the IP address with the address of the host device of the server if you know it
         clientSock = new Socket("127.0.0.1", Server.PORT);
 
         receiveData = new DataInputStream(new BufferedInputStream(clientSock.getInputStream()));
