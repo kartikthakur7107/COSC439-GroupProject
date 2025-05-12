@@ -19,7 +19,7 @@ public class Client {
         username = write.nextLine();
 
         //You can replace the IP address with the address of the host device of the server if you know it
-        clientSock = new Socket("127.0.0.1", Server.PORT);
+        clientSock = new Socket("10.128.159.30", 3030);
 
         receiveData = new DataInputStream(new BufferedInputStream(clientSock.getInputStream()));
         sendData = new DataOutputStream(clientSock.getOutputStream());
